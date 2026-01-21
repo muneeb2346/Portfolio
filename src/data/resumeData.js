@@ -17,20 +17,6 @@ export const resumeData = {
       period: "2023 - 2027",
       gpa: "3.74/4.0",
       description: "Currently pursuing Bachelor's degree in Computer Science"
-    },
-    {
-      institution: "Chenab College, Shorkot City",
-      degree: "F.Sc Pre-Engineering",
-      period: "2020 - 2022",
-      percentage: null,
-      description: "Higher Secondary Education"
-    },
-    {
-      institution: "Zaid Public High & Girl Higher Secondary School, Shorkot Cantt",
-      degree: "Matriculation",
-      period: "2018 - 2020",
-      percentage: "91.54%",
-      description: "Secondary School Education"
     }
   ],
 

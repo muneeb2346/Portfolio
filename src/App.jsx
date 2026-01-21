@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,12 +11,32 @@ import Footer from './components/Footer';
 import Layout from './components/Layout';
 
 import './styles/variables.css';
-import './styles/components.css';
 import './styles/global.css';
 import './styles/App.css';
+import './styles/components.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+
+  // Smooth scroll to section
+  useEffect(() => {
+    const handleSmoothScroll = (e) => {
+      const target = e.target;
+      if (target.hash && target.pathname === window.location.pathname) {
+        e.preventDefault();
+        const element = document.querySelector(target.hash);
+        if (element) {
+          window.scrollTo({
+            top: element.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleSmoothScroll);
+    return () => document.removeEventListener('click', handleSmoothScroll);
+  }, []);
 
   return (
     <Layout>
