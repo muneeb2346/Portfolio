@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Cpu, Code2, Database, Tool, Smartphone, Server, Layout, GitBranch } from 'lucide-react';
+import { Cpu, Code2, Database, Smartphone, Server, Layout, GitBranch, Wrench } from 'lucide-react';
 import { skillsData } from '../data/skillsData';
 
 const Skills = ({ id, setActiveSection }) => {
@@ -30,7 +30,7 @@ const Skills = ({ id, setActiveSection }) => {
   const categoryIcons = {
     'Programming Languages': <Code2 size={24} />,
     'Frameworks & Libraries': <Layout size={24} />,
-    'Tools & Technologies': <Tool size={24} />,
+    'Tools & Technologies': <Wrench size={24} />,
     'Soft Skills': <Cpu size={24} />
   };
 

@@ -122,48 +122,6 @@ const About = ({ id, setActiveSection }) => {
               <h3 className="about-card-title">Professional Summary</h3>
               <p className="summary-text">{personal.summary}</p>
             </div>
-
-            {/* Education Timeline */}
-            <div className="about-card education">
-              <h3 className="about-card-title">
-                <BookOpen size={20} />
-                <span>Education</span>
-              </h3>
-              
-              <div className="timeline">
-                {education.map((edu, index) => (
-                  <div key={index} className="timeline-item">
-                    <div className="timeline-marker"></div>
-                    <div className="timeline-content">
-                      <div className="timeline-header">
-                        <h4 className="timeline-title">{edu.institution}</h4>
-                        <span className="timeline-period">
-                          <Calendar size={14} />
-                          {edu.period}
-                        </span>
-                      </div>
-                      <p className="timeline-degree">{edu.degree}</p>
-                      
-                      {edu.gpa && (
-                        <div className="timeline-badge">
-                          <Award size={14} />
-                          <span>GPA: {edu.gpa}</span>
-                        </div>
-                      )}
-                      
-                      {edu.percentage && (
-                        <div className="timeline-badge">
-                          <Award size={14} />
-                          <span>Percentage: {edu.percentage}</span>
-                        </div>
-                      )}
-                      
-                      <p className="timeline-description">{edu.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
