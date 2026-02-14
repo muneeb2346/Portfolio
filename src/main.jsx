@@ -20,11 +20,6 @@ metaThemeColor.name = 'theme-color';
 metaThemeColor.content = '#2563eb';
 document.head.appendChild(metaThemeColor);
 
-// Performance mark
-if (process.env.NODE_ENV === 'development') {
-  performance.mark('app-start');
-}
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
@@ -34,12 +29,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </HelmetProvider>
   </React.StrictMode>
 );
-
-// Performance measurement
-if (process.env.NODE_ENV === 'development') {
-  performance.mark('app-mounted');
-  performance.measure('app-load', 'app-start', 'app-mounted');
-  console.log('App load time:', 
-    performance.getEntriesByName('app-load')[0].duration.toFixed(2) + 'ms'
-  );
-}

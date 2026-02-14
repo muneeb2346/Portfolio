@@ -1,7 +1,7 @@
 // Environment configuration helper
 export const env = {
   // Formspree
-  formspreeId: import.meta.env.VITE_FORMSPREE_ID,
+  formspreeId: import.meta.env.VITE_FORMSPREE_ID || 'xvgobgop',
   
   // Site
   siteUrl: import.meta.env.VITE_SITE_URL || 'http://localhost:5173',
@@ -22,16 +22,5 @@ export const env = {
   isProduction: import.meta.env.PROD,
   mode: import.meta.env.MODE
 };
-
-// Validate required env vars in production
-if (env.isProduction) {
-  const required = ['formspreeId'];
-  
-  required.forEach(key => {
-    if (!env[key]) {
-      console.warn(`Warning: Environment variable ${key} is not set in production`);
-    }
-  });
-}
 
 export default env;
