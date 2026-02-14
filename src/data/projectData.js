@@ -17,7 +17,7 @@ export const projects = [
       "Multi-branch support and centralized management",
       "Export functionality for reports (PDF, Excel)"
     ],
-    github: "https://github.com/muneeb2346/iron-store-management",
+    github: "https://github.com/muneeb2346/ManagementSystem",
     liveDemo: null,
     image: "/images/iron-store-system.jpg",
     category: "Full Stack",
@@ -52,7 +52,7 @@ export const projects = [
       "Multiple temperature units (Celsius/Fahrenheit)",
       "Air quality index and UV index display"
     ],
-    github: "https://github.com/muneeb2346/weather-app",
+    github: "https://github.com/muneeb2346/Flutter-APP",
     liveDemo: null,
     image: "/images/weather-app.jpg",
     category: "Mobile",
