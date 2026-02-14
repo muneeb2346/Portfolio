@@ -5,7 +5,7 @@
 
 A modern, responsive portfolio website built with React.js showcasing my projects, skills, and experience as a Front-End Developer.
 
-![Portfolio Preview](./public/og-image.jpg)
+![Portfolio Preview](./public/og-image.svg)
 
 ## ✨ Features
 
