@@ -1,4 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import { initGA, trackPageView } from './utils/analytics';
 import { measurePerformance } from './utils/performance';
 import SEO from './components/SEO';
 import Loading from './components/Loading';
@@ -13,19 +15,22 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Layout from './components/Layout';
 import { SkipToContent } from './utils/accessibility';
+import env from './config/env';
 
 import './styles/variables.css';
 import './styles/global.css';
 import './styles/App.css';
 import './styles/components.css';
 
+if (env.isProduction && env.enableAnalytics) {
+  initGA();
+}
 
 const Hero = lazy(() => import('./components/Hero'));
 const About = lazy(() => import('./components/About'));
 const Experience = lazy(() => import('./components/Experience'));
 const Projects = lazy(() => import('./components/Projects'));
 const Skills = lazy(() => import('./components/Skills'));
-const Education = lazy(() => import('./components/Education'));
 const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
@@ -56,7 +61,8 @@ function App() {
   }, [endMeasure]);
 
   return (
-     <ErrorBoundary>
+     <HelmetProvider>
+      <ErrorBoundary>
       <Layout>
         <SEO />
         <SkipToContent />
@@ -93,6 +99,8 @@ function App() {
       <Footer />
     </Layout>
      </ErrorBoundary>
+     </HelmetProvider>
+     
     
   );
 }

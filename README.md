@@ -1,16 +1,89 @@
-# React + Vite
+# Muhammad Muneeb - Front-End Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Deploy Status](https://img.shields.io/github/actions/workflow/status/muneeb2346/portfolio/deploy.yml?style=flat-square)](https://github.com/muneeb2346/portfolio/actions)
+[![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://muneeb-portfolio.vercel.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-Currently, two official plugins are available:
+A modern, responsive portfolio website built with React.js showcasing my projects, skills, and experience as a Front-End Developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio Preview](./public/og-image.jpg)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design** - Fully responsive on all devices (mobile, tablet, desktop)
+- **Modern UI/UX** - Clean, professional design with smooth animations
+- **Interactive Projects** - Filterable project gallery with detailed modal views
+- **Contact Form** - Functional contact form with validation and Formspree integration
+- **Performance Optimized** - Lazy loading, code splitting, and optimized images
+- **Accessibility** - WCAG compliant with keyboard navigation and screen reader support
+- **SEO Ready** - Meta tags, sitemap, and semantic HTML
+- **Light Theme** - Clean, professional light theme throughout
 
-## Expanding the ESLint configuration
+## 🛠️ Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js** - Frontend library
+- **Vite** - Build tool and development server
+- **CSS3** - Styling with CSS variables and modern features
+- **Lucide React** - Icon library
+- **Formspree** - Form submission handling
+- **React Helmet Async** - SEO management
+- **Framer Motion** - Animations (optional)
+
+## 📦 Project Structure
+portfolio/
+├── public/ # Static assets
+│ ├── images/ # Image files
+│ ├── sitemap.xml # SEO sitemap
+│ └── robots.txt # Robots configuration
+├── src/
+│ ├── components/ # React components
+│ │ ├── Header.jsx
+│ │ ├── Hero.jsx
+│ │ ├── Projects.jsx
+│ │ └── ...
+│ ├── data/ # Static data files
+│ │ ├── resumeData.js
+│ │ ├── projectData.js
+│ │ └── skillsData.js
+│ ├── styles/ # CSS styles
+│ │ ├── variables.css
+│ │ ├── global.css
+│ │ └── components.css
+│ ├── utils/ # Utility functions
+│ ├── config/ # Configuration files
+│ └── App.jsx # Main App component
+├── .github/ # GitHub Actions workflows
+├── scripts/ # Build scripts
+└── package.json # Dependencies
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/muneeb2346/portfolio.git
+   cd portfolio
+
+2. Install dependencies:
+    ```bash
+    npm install
+
+3. Create environment file:
+    ```bash
+    cp .env.example .env
+
+4. Update environment variables in .env:
+    VITE_FORMSPREE_ID: Your Formspree form ID
+
+    VITE_SITE_URL: Your site URL
+
+5. tart development server:
+    ```bash
+    npm run dev
