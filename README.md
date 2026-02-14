@@ -1,8 +1,7 @@
 # Muhammad Muneeb - Front-End Developer Portfolio
 
 [![Deploy Status](https://img.shields.io/github/actions/workflow/status/muneeb2346/portfolio/deploy.yml?style=flat-square)](https://github.com/muneeb2346/portfolio/actions)
-[![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://muneeb-portfolio.vercel.app)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 
 A modern, responsive portfolio website built with React.js showcasing my projects, skills, and experience as a Front-End Developer.
 
